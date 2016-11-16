@@ -26,7 +26,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 //MassiveEconomy plugin API
-use MassiveEconomy\MassiveEconomyAPI;
+use onebone\economyapi\EconomyAPI;
 
 class EventListener extends PluginBase implements Listener{
 	
