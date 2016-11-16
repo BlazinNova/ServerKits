@@ -22,7 +22,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\item\Item;
 use pocketmine\command\ConsoleCommandSender;
 //MassiveEconomy plugin API
-use MassiveEconomy\MassiveEconomyAPI;
+use onebone\economyapi\EconomyAPI;
 
 class Main extends PluginBase{
     
@@ -91,9 +91,9 @@ class Main extends PluginBase{
     	$this->initializeKitsPermissions();
     	$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
     	//Check if MassiveEconomy is installed
-    	if($this->getServer()->getPluginManager()->getPlugin("MassiveEconomy") != false){
-    		//Checking if MassiveEconomyAPI version is compatible
-    		if(MassiveEconomyAPI::getInstance()->getAPIVersion() == "0.90"){
+    	if($this->getServer()->getPluginManager()->getPlugin("EconomyAPI") != false){
+    		//Checking if EconomyAPI version is compatible
+    		if(MassiveEconomyAPI::getInstance()->getAPIVersion() == "2.0"){
     			$this->economy = true;
     			Server::getInstance()->getLogger()->info($this->translateColors("&", Main::PREFIX . "&aEconomy support enabled!"));
     		}else{
