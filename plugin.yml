@@ -1,7 +1,7 @@
 name: ServerKits
 main: ServerKits\Main
 version: "1.2"
-api: [1.9.0]
+api: [2.0.0]
 depend: [MassiveEconomy]
 load: STARTUP
 author: EvolSoft
