@@ -140,7 +140,7 @@ class EventListener extends PluginBase implements Listener{
     								$price = $this->plugin->getKitPrice($line1);
     								//Check Economy support & Price
     								if($this->plugin->economy == true && $price > 0){
-    									$symbol = MassiveEconomyAPI::getInstance()->getMoneySymbol();
+    									$symbol = EconomyAPI::getInstance()->getMoneySymbol();
     									$event->setLine(2, $price . $symbol);
     								}
     								$event->getPlayer()->sendMessage($this->plugin->translateColors("&", Main::PREFIX . "&aKit sign created"));
